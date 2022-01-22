@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.silder{
+    max-width: 1200px;
+    height: 100vh;
+    background-color: black;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s;
+}
+.silder__img{
+    width: 960px;
+    min-height: 600px;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+}
+.silder .silder__img input{
+    display: none;
+}
+.silder__img img{
+    width: 960px;
+    height: 600px;
+    opacity: 1;
+    
+}
+.silder .silder__img .img-slider1{
+    position: absolute;
+    z-index: 4; 
+}
+.silder .silder__img .img-slider2{
+    position: absolute;
+    z-index: 3;  
+}
+.silder .silder__img .img-slider3{
+    position: absolute;
+    z-index: 2;  
+}
+.silder .silder__img .img-slider4{
+    position: absolute;
+    z-index: 1;
+}
+
+.silder .label__silder{  
+    position: absolute;
+    bottom: -15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.silder .label__silder label{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(151, 148, 148);
+    border-radius: 10px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+.silder .label__silder label p{
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+
+}
+.silder .label__silder label:hover{
+    background-color: red;
+}
+#img1:checked ~ .img-slider1{
+    z-index: 5;
+    transition: all 0.4s;
+    transform: rotate(360deg);
+    opacity: 1;
+}
+#img1:checked ~ .img-slider2{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#img1:checked ~ .img-slider3{
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ------------------------ */
+
+#img2:checked ~ .img-slider2{
+    z-index: 6;
+    transition: all 0.4s;
+    transform: rotate(360deg);
+    opacity: 1;
+}
+#img2:checked ~ .img-slider3{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#img2:checked ~ .img-slider4{
+    opacity: 0;
+    pointer-events: none;
+}
+/* ------------------------ */
+
+#img3:checked ~ .img-slider3{
+    z-index: 7;
+    transform: rotate(360deg);
+    transition: all 0.4s;
+    opacity: 1;
+}
+#img3:checked ~ .img-slider1{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#img3:checked ~ .img-slider4{
+    opacity: 0;
+    pointer-events: none;
+}
+/* ------------------------ */
+
+#img4:checked ~ .img-slider4{
+    z-index: 8;
+    transition: all 0.4s;
+    transform: rotate(360deg);
+    opacity: 1;
+} 
+#img4:checked ~ .img-slider1{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#img4:checked ~ .img-slider2{
+    opacity: 0;
+    pointer-events: none;
+}
+
+

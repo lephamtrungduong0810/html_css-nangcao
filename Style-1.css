@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif,'Times New Roman', Times, serif,Arial, Helvetica, sans-serif;
+}
+#wrapper{
+    max-width: 1200px;
+    background-color: rgb(61, 59, 59);
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.content .logo-img{
+    position: relative;
+    margin: 15px 10px;
+    width: 350px;
+    height: auto;
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+.content .logo-img img{
+    width: 100%;
+    height: 250px;
+    
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+}
+.header h2{
+    font-size: 30px;
+    font-weight: 100;
+    padding-bottom: 20px;
+    transition: all 0.5s;
+    font-size: 35px;
+    top: 30px;
+}
+.header h2 span{
+    font-weight: bold;
+   
+}
+.header p{
+    margin: 0px 20px;
+    margin-top: 40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.footer{
+    position: absolute;
+    bottom: 3px;
+    background-color: rgba(255,255,255,0.5) ;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 20px;
+    color: black;
+    margin-top: 500px;
+    display: none;
+    transition: all 0.5s step-end;
+    cursor: pointer;
+}
+.footer a{
+    color: black;
+    font-weight: 100;
+}
+.footer a span{
+    font-weight: bold;
+}
+.footer i{
+    padding: 0px 5px;
+}
+.footer i:nth-last-child(3){
+    padding-left: 100px;
+}
+
+/* hiệu ứng  */
+
+.content .logo-img:hover{
+    opacity: 1;
+}
+.content .logo-img:hover .header{
+    transform: translateY(-25px);
+}
+.content .logo-img:hover .header p{
+    transform: translateY(-50px);
+    visibility: visible;
+    opacity: 1;
+}
+.content .logo-img:hover .footer{
+    display: block;
+}
+.content .logo-img .footer i:hover{
+    color: rgb(247, 242, 242);
+}
+ 
+/* trên table và điện thoại */
+@media only screen  and (max-width: 46.1875em){
+    #wrapper{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #73a777, #5c948e);
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width:740px) and (max-width:1023px ){
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content .logo-img{
+        width: 40%;
+        margin: 20px 15px;
+    }
+}
